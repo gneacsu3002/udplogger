@@ -22,6 +22,6 @@ while True:
     data, address = s.recvfrom(4096)
     curtm = datetime.now()
     print(curtm.strftime("%H:%M:%S"), " received from \'", address[0], "\': ", data.decode('utf-8'), "\n")
-    slacknotif.slacknotif(curtm.strftime("%H:%M:%S"), " received from \'", address[0], "\': ", data.decode('utf-8'), "\n")
+    slacknotif.slacknotif(curtm.strftime("%H:%M:%S") + " received from \'" + address[0] + "\': " + data.decode('utf-8'))
 
 
